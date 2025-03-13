@@ -182,4 +182,70 @@ function ToA_New_Scene_Finish(Table)
 		wesnoth.interface.screen_fade({0, 0, 0, 0}, 500)
 	end
 end	
+
+function ToA_Upgrade_Character(id)
+	local unit=wesnoth.units.get(id)
+	if id=="gar" then
+	elseif  id=="merissa" then
+	elseif  id=="mudoc" then
+	elseif  id=="sodry" then
+	end
+end
+
+function ToA_Update_Town_Over_Years(years)
+	local remaining_time=years
+	local population_growth = 0
+	local prosperity_growth = 0
+	local valuables_growth = 0
+	local population=wml.variables["ToA.Town.Population"]
+	local prosperity=wml.variables["ToA.Town.Prosperity"]
+	local valuables=wml.variables["ToA.Town.Valuables"]
+	
+	--Full years change
+	for i=1,math.floor(years) do
+		remaining_time=remaining_time-1
 		
+		population_growth = 2+population*((prosperity/population-1)/10+0.02)
+		prosperity_growth = 0.02*prosperity+5
+		valuables_growth = (10+prosperity/20)
+	
+		population=population+population_growth
+		prosperity=prosperity+prosperity_growth
+		valuables=valuables+valuables_growth
+	end
+	
+	--Leftover part of year change
+	if remaining_time~=0 then
+		population_growth = (2+population*((prosperity/population-1)/10+0.02))*remaining_time
+		prosperity_growth = (0.02*prosperity+5)*remaining_time
+		valuables_growth = (10+prosperity/20)*remaining_time
+	
+		population=population+population_growth
+		prosperity=prosperity+prosperity_growth
+		valuables=valuables+valuables_growth
+	end
+	
+	wml.variables["ToA.Town.Population"]=math.floor(population)
+	wml.variables["ToA.Town.Prosperity"]=math.floor(prosperity)
+	wml.variables["ToA.Town.Valuables"]=math.floor(valuables)
+end
+
+function ToA_Ini_Campaign_Variables()
+	wml.variables["ToA.Characters.Gar.Level"]=1
+	wml.variables["ToA.Characters.Gar.Sword"]=false
+	
+	wml.variables["ToA.Characters.Merissa.Level"]=1
+	
+	wml.variables["ToA.Characters.Mudoc.Level"]=1
+	
+	wml.variables["ToA.Characters.Sodry.Level"]=1
+	
+	wml.variables["ToA.Town.Population"]=0
+	wml.variables["ToA.Town.Prosperity"]=0
+	wml.variables["ToA.Town.Valuables"]=0
+	
+	wml.variables["ToA.Scenario_Specific"]={}
+	
+	wml.variables["ToA.Campaign_General"]={}
+	
+end
