@@ -1,0 +1,25 @@
+This document is a list of agreements and licenses for the "Town of Arnsreach". Should contain all relevant information about assets used that does not belong to the "Battle for Wesnoth" project itself or that was not created by the mod authors.
+
+--<<Sound files, found in sounds folder ..
+
+	See resource packs
+	
+-->>Sound files, found in sounds folder ..
+
+--<<Image files, found in images folder ..
+	
+	See resource packs
+	
+-->>Image files, found in images folder ..
+
+--<<Code
+
+-->>Code
+
+--<<Communicated agreements (with other mod authors)
+	From, Dugi, creator of Ledgends of the invincible, we have borrowed some character abilities such as WEAPON_SPECIAL_HIT_AND_RUN and ABILITY_SPRINT. 
+	
+
+-->>Communicated agreements (from other mod authors)
+
+

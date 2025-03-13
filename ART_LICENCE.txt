@@ -1,0 +1,1 @@
+See the "Image files" and "Sound files" sections in ..\documentation\Licence and agreements.txt

@@ -1,0 +1,45 @@
+Biome
+
+All:
+Elementals
+Drakes (Volcano, mountains, also on islands)
+Undead
+
+Snow:
+Orcs/Goblin
+Ogres
+Wild animals (wolves, frost stoat, Icemonax, Yeti)
+
+Sea:
+Naga
+Merman
+Sea monster
+
+Forest:
+Elves
+Woses
+Wild animals (wolves, bear, boar)
+
+Mountain:
+Trolls
+Dwarfs
+Orcs/Goblin
+Gryphon (they are intelligent)
+
+Temperate:
+We are living there
+
+Swamp:
+Swamp Saurians
+Wild animals (swamp lizard, dragonfly)
+Naga (could be)
+
+Jungle:
+Jungle Saurians
+Naga
+
+Desert:
+Dunefolk
+Desert Elves (old Quenoth)
+Quenoth Elves
+Desert Saurians (my work)
