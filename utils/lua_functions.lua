@@ -205,7 +205,7 @@ function ToA_Update_Town_Over_Years(years)
 	for i=1,math.floor(years) do
 		remaining_time=remaining_time-1
 		
-		population_growth = 2+population*((prosperity/population-1)/10+0.02)
+		population_growth = 2+population*((prosperity/math.min(1,population)-1)/10+0.02)
 		prosperity_growth = 0.02*prosperity+5
 		valuables_growth = (10+prosperity/20)
 	
@@ -216,7 +216,7 @@ function ToA_Update_Town_Over_Years(years)
 	
 	--Leftover part of year change
 	if remaining_time~=0 then
-		population_growth = (2+population*((prosperity/population-1)/10+0.02))*remaining_time
+		population_growth = (2+population*((prosperity/math.min(1,population)-1)/10+0.02))*remaining_time
 		prosperity_growth = (0.02*prosperity+5)*remaining_time
 		valuables_growth = (10+prosperity/20)*remaining_time
 	
@@ -231,21 +231,23 @@ function ToA_Update_Town_Over_Years(years)
 end
 
 function ToA_Ini_Campaign_Variables()
-	wml.variables["ToA.Characters.Gar.Level"]=1
-	wml.variables["ToA.Characters.Gar.Sword"]=false
-	
-	wml.variables["ToA.Characters.Merissa.Level"]=1
-	
-	wml.variables["ToA.Characters.Mudoc.Level"]=1
-	
-	wml.variables["ToA.Characters.Sodry.Level"]=1
-	
-	wml.variables["ToA.Town.Population"]=0
-	wml.variables["ToA.Town.Prosperity"]=0
-	wml.variables["ToA.Town.Valuables"]=0
-	
-	wml.variables["ToA.Scenario_Specific"]={}
-	
-	wml.variables["ToA.Campaign_General"]={}
-	
+	if not wml.variables["ToA.Campaign_General"] then
+		wml.variables["ToA.Characters.Gar.Level"]=1
+		wml.variables["ToA.Characters.Gar.Sword"]=false
+		
+		wml.variables["ToA.Characters.Merissa.Level"]=1
+		
+		wml.variables["ToA.Characters.Mudoc.Level"]=1
+		
+		wml.variables["ToA.Characters.Sodry.Level"]=1
+		
+		wml.variables["ToA.Town.Population"]=0
+		wml.variables["ToA.Town.Prosperity"]=0
+		wml.variables["ToA.Town.Valuables"]=0
+		
+		wml.variables["ToA.Scenario_Specific"]={}
+		
+		wml.variables["ToA.Campaign_General"]={}
+		wml.variables["ToA.Campaign_General.Finished_Last_Scenario"]=false
+	end
 end

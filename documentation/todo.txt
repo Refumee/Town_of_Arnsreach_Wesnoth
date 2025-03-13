@@ -4,27 +4,20 @@ town pop and town prosparity not shown in replay... dont bother
 
 find more animal npcs, deer
 
-new gear
-
-magic item for sodry, he needs new mechanic
+new gear, new ability
 
 part 3: map rework: saurian: base, farmland, dragonfly pen, nursing ground, dam?
 
-part 2: ideas
-spot dam
-
 funny gimmick: saurian titels changes over time: Ambassador -> Hight Embassador -> Lord Embezzelor -> Knight Embaresment ...
- 
-get croc hiss sound?
- 
- block tiles behind sea serpent block incase player passes it
- 
- add horn sound to saurian first contact
  
  add militia unit
  
  sidequest that gives minor stats (+3 hp?)
  
  clean up the _main file
+
+ weather patterns reduce lag?
  
- level up units
+ boat ride is not fun enough.. need new fun mechanic
+ 
+ 
