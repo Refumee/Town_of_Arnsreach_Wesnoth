@@ -10,19 +10,15 @@ part 3: map rework: saurian: base, farmland, dragonfly pen, nursing ground, dam?
 
 funny gimmick: saurian titels changes over time: Ambassador -> Hight Embassador -> Lord Embezzelor -> Knight Embaresment ...
  
- add militia unit
- 
  sidequest that gives minor stats (+3 hp?)
  
- clean up the _main file
+ clean up the _main file, add dependency checks
 
  weather patterns reduce lag?
  
  boat ride is not fun enough.. need new fun mechanic
  
  add treasure image
- 
- lift of fog error
  
  floating easy to find treasure
  
