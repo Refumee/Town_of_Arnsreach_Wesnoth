@@ -10,8 +10,6 @@ part 3: map rework: saurian: base, farmland, dragonfly pen, nursing ground, dam?
 
 funny gimmick: saurian titels changes over time: Ambassador -> Hight Embassador -> Lord Embezzelor -> Knight Embaresment ...
  
- sidequest that gives minor stats (+3 hp?)
- 
  clean up the _main file, add dependency checks
 
  weather patterns reduce lag?
@@ -28,8 +26,6 @@ funny gimmick: saurian titels changes over time: Ambassador -> Hight Embassador 
  
  something to intreduce the new gear
  
- set chars to level 1
- 
  illuminate lantern peasant
  
  sounds of frogs..
@@ -38,4 +34,27 @@ funny gimmick: saurian titels changes over time: Ambassador -> Hight Embassador 
  set a few ambush spots
  give saurian faction gold every 2 or 3 turns
  
+ create_map = << return wesnoth.require("cave_map_generator").generate_map(...) >> -- lua tag not needed?
  
+ fix this code?
+ #define PLAYER_MOVEMENT_POINTS_MAX
+	[modify_unit]
+		silent=yes
+		[filter]
+		   side=1
+		[/filter]
+		[effect]
+			apply_to=movement
+			increase=0%
+		[/effect]
+	[/modify_unit]
+#enddef
+
+part 4
+ sidequest that gives minor stats (+3 hp?) (saurian shaman wants some gold and for you to do q quick sidequest north of the camp) (rewards is +health for all heroes and prosperity)
+ 
+ secret quest part 1: scout north at swamp area, encounter wose that speaks in code/riddels...
+ 
+ main quest: saurian chief asks you to fight the one-eyes that likes to eat them. You move east and do so. The saurians also move east but gets in conflict with shadow creatures
+ 
+	
